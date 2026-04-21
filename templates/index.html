@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Augmentation App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Face Augmentation Tool</h1>
+
+    <form method="POST" enctype="multipart/form-data" class="form-box">
+        
+        <input type="file" name="image" required>
+
+        <label>Number of images:</label>
+        <input type="number" name="num_images" value="20" min="1" max="100">
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <hr>
+
+    <h2>Generated Images</h2>
+
+    <div class="image-grid">
+        {% for img in images %}
+            <img src="{{ img }}">
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>
