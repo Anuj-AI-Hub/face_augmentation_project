@@ -26,3 +26,11 @@ Thumbs.db
 
 input/
 uploads/
+
+
+output/
+uploads/
+__pycache__/
+*.pyc
+data/
+datasets/
